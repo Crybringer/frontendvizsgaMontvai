@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="row">
+    <div class="col-12 text-center" *ngIf='!adatok'>
+        <img src="../../assets/feladat6-loading.gif" alt="" class="img img-fluid">
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <th *ngFor="let vegigmegy of adatokFejlec"> {{vegigmegy}} </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sor of adatok">
+                    <td *ngFor="let cella of adatokFejlec ">                                 
+                        {{sor[cella]}}
+                     </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
